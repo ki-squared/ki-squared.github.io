@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+    <title>Tourist Bus Pattern</title>
+</head>
+<body>
+    <div class="container">
+        <div id="map" style="width:700px;height:400px; margin:200px auto; text-align:center " ></div>
+	    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aca622ff76e115641b7726d10a890e3b"></script>
+	    <script   script>
+		    var container = document.getElementById('map');
+		    var options = {
+			    center: new kakao.maps.LatLng(33.38783156771537, 126.5701360054699),
+			    level: 10
+		    };
+		    var map = new kakao.maps.Map(container, options);
+	    </script>
+    </div>
+</body>
+</html>
