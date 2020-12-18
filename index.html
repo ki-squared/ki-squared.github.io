@@ -20,6 +20,87 @@
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+
+  <style>
+    .scene {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            height: 600px;
+            perspective: 300px; /* 300px 만큼 떨어져 있는 관찰자 시점 */
+            perspective-origin: center;
+            /* perspective-origin: bottom left; */
+            /* perspective-origin: right top; */
+        }
+
+        .cube {
+            width: 600px;
+            height: 600px;
+            transform-style: preserve-3d; /* child element에 3d 속성을 주기 위함 */
+            transform: translateZ(-300px); /* 화면에서 뒤로 빠지는 원근감이 생긴다 -> 더 작아짐 */
+            position: relative;
+            animation: spin 6s linear infinite;
+
+        }
+
+        @keyframes spin {
+            0% {transform: translateZ(-900px) rotateX(0deg) rotateY(0deg);}
+            100% {transform: translateZ(-900px) rotateX(360deg) rotateY(360deg);}
+            
+        }
+
+        .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            text-align: center;
+            padding-top: 40%;
+            font-size: 80px;
+        }
+
+        .back {
+            background-color: tomato;
+            transform: rotateY(180deg) translateZ(300px);
+        }
+
+        .right {
+                background-color:cyan;
+                transform: rotateY(90deg) translateZ(300px);
+        }
+
+        .left {
+            background-color: rgb(255, 206, 151);
+            transform: rotateY(-90deg) translateZ(300px);
+        }
+
+        .top {
+            background-color: yellow;
+            transform: rotateX(90deg) translateZ(300px);
+        }
+
+        .bottom {
+            background-color: greenyellow;
+            transform: rotateX(-90deg) translateZ(300px);
+        }
+
+        .front {
+            background-color:lightpink;
+            transform: translateZ(300px);
+        }
+
+        .rectangle:hover {
+          
+        }
+        @keyframes turn {
+              0% {
+                rotateY(0)
+              } 10% {
+                rotateY(360)
+              }
+        }
+  </style>
 </head>
 
 <body id="page-top">
@@ -44,7 +125,7 @@
         <a class="js-scroll-trigger" href="#blog">Blog</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Contact</a>
+        <a class="js-scroll-trigger" href="#contact">Resume</a>
       </li>
     </ul>
   </nav>
@@ -198,20 +279,71 @@
 
   <!-- Study -->
   <!-- Map -->
-  <div id="contact" class="map">
-    <!-- <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-    <br />
-    <small>
-      <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-    </small> -->
+  <div id="contact" class="content-section">
+    <div class="container text-center">
+      <div class="content-section-heading">
+        <h3 class="text-secondary mb-0">RESUME</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>This is for FINAL EXAM</h2>
+          <img style="width: 25%; border-radius: 50%; margin: 10px 0px 30px 0px;" src="page/final/profile_img.png">
+          <div class="resume-contents" style="text-align: justify; position: relative;">
+            <h6>보유 기술</h6>
+            <ol>
+              <li><b>Programming Language</b>&nbsp; Java(~12), C, C++, Python, HTML5<br /></li>
+              <li><b>Tools and Environments</b>&nbsp; GitHub, IntelliJ, Sublime Text, Android Studio, PyCharm</li>
+              <li><b>Library and Framework</b>&nbsp; Bootstrap</li>
+              <li><b>Currently Studying</b>&nbsp; MySQL, UNIX, Linux, Jira, node.js</li>            
+            </ol>
+            <div class="project" style="margin-top: 20px;">
+              <h6>대표 프로젝트</h6>
+              <dl style="padding-left: 30px;">
+                <dt style="font-weight:bold;">WAGGLE Project</dt>
+                <dd>A self-organizing efficient power generation system in extreme condition for Waggle</dd>
+              </dl>
+            </div>
+            <div class="express">
+              <div class="scene">
+                <div class="cube">
+                    <div class="face back" style="background-color: blue;">
+                        <div class="dice-content">Learner</div>
+                    </div>
+                    <div class="face left" style="background-color: red;">
+                        <div class="dice-content">Developer</div>
+                    </div>
+                    <div class="face right" style="background-color:yellow;">
+                        <div class="dice-content">Positive</div>
+                    </div>
+                    <div class="face top" style="background-color:green">
+                        <div class="dice-content">Newbie</div>
+                    </div>
+                    <div class="face bottom" style="background-color:pink">
+                        <div class="dice-content">Achiever</div>
+                    </div>
+                    <div class="face front" style="background-color:lightblue">
+                        <div class="dice-content">Hard-Working</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rectangle" style="width: 300px; height: 200px; background-color: lightcoral; animation: turn 3s ease 1s infinite"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
 
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
       <ul class="list-inline mb-5">
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="mail:abt.jade@gmail.com">
+          <a class="social-link rounded-circle text-white mr-3" href="mailto:abt.jade@gmail.com">
             <i class="icon-social-google"></i>
           </a>
         </li>
