@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KI&sup2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <div>hello world!</div>
-    <p>KI<sup>2</sup></p>
+    <div class="main">
+        <div class="header"> 제주 대학교 들어갈 부분 </div>
+        <div class="content"> 
+            <div class="content-item">
+                <div class="content-header">
+                    HTML
+                </div>
+                <div class="content-header2">
+                    Hyper Text Markup Language
+                </div>
+
+                <div class="content-text">
+                    Lorem ipsum dolor sit,it. Assume aliquid sapiente, aspernatur nemo modi, consequuntur quod eos laborum nisi aliquam veniam explicabo possimus deleniti atque culpa.
+                </div>
+                <div class="content-a">HTML Convenction</div>
+                <div class="content-a">HTML5 Elements</div>
+                <div class="content-a">Responsible Web</div>
+            </div>
+            <div class="content-item">2</div>
+            <div class="content-item">3</div>
+            <div class="content-item">4</div>
+        </div>
+    </div>
+    <div class="footer">카피라이트</div>
 </body>
 </html>
+
+<style>
+    html, body{
+        padding: 0 0 0 0;
+        margin: 0 0 0 0 ;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        background: url(final/bg.gif);
+    }
+    .content{
+        display: flex;
+        width: 1200px;
+    }
+    .content-item{
+        flex: 1;
+        box-shadow: inset -5px 0 5px #282d36;
+        padding-left: 25px;
+    }
+    .header{
+        width: 190px;
+        background: url(final/bg_header.gif);
+        border-left: 1px soild #4d5669;
+        border-right: 1px soild #4d5669;
+    }
+    .footer{
+        flex: 50px;
+        text-align: center;
+        background-color: #282d36;
+    }
+    .content-header2{
+        padding-top: 12px;
+
+    }
+
+    .content-text{
+        padding-top: 40px;
+        height: 150px;
+        font-size: 1em;
+        color: #a7a7a7;
+
+    }
+
+    .content-header{
+        padding-top: 35px;
+
+    }
+
+    .content-a{
+        padding-bottom: 7px;
+        color: white;
+        font-size: 1em;
+    }
+
+    @media all and (max-width:800px) {
+        .main, .content {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+</style>
