@@ -20,87 +20,6 @@
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
-
-  <style>
-    .scene {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 600px;
-            height: 600px;
-            perspective: 300px; /* 300px 만큼 떨어져 있는 관찰자 시점 */
-            perspective-origin: center;
-            /* perspective-origin: bottom left; */
-            /* perspective-origin: right top; */
-        }
-
-        .cube {
-            width: 600px;
-            height: 600px;
-            transform-style: preserve-3d; /* child element에 3d 속성을 주기 위함 */
-            transform: translateZ(-300px); /* 화면에서 뒤로 빠지는 원근감이 생긴다 -> 더 작아짐 */
-            position: relative;
-            animation: spin 6s linear infinite;
-
-        }
-
-        @keyframes spin {
-            0% {transform: translateZ(-900px) rotateX(0deg) rotateY(0deg);}
-            100% {transform: translateZ(-900px) rotateX(360deg) rotateY(360deg);}
-            
-        }
-
-        .face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0.7;
-            text-align: center;
-            padding-top: 40%;
-            font-size: 80px;
-        }
-
-        .back {
-            background-color: tomato;
-            transform: rotateY(180deg) translateZ(300px);
-        }
-
-        .right {
-                background-color:cyan;
-                transform: rotateY(90deg) translateZ(300px);
-        }
-
-        .left {
-            background-color: rgb(255, 206, 151);
-            transform: rotateY(-90deg) translateZ(300px);
-        }
-
-        .top {
-            background-color: yellow;
-            transform: rotateX(90deg) translateZ(300px);
-        }
-
-        .bottom {
-            background-color: greenyellow;
-            transform: rotateX(-90deg) translateZ(300px);
-        }
-
-        .front {
-            background-color:lightpink;
-            transform: translateZ(300px);
-        }
-
-        .rectangle:hover {
-          
-        }
-        @keyframes turn {
-              0% {
-                rotateY(0)
-              } 10% {
-                rotateY(360)
-              }
-        }
-  </style>
 </head>
 
 <body id="page-top">
@@ -125,7 +44,7 @@
         <a class="js-scroll-trigger" href="#blog">Blog</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Resume</a>
+        <a class="js-scroll-trigger" href="#contact">Studies</a>
       </li>
     </ul>
   </nav>
@@ -175,7 +94,7 @@
         <h2 class="mb-5">Recent Projects</h2>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6">
+        <!-- <div class="col-lg-6">
           <a class="portfolio-item" href="#!">
             <div class="caption">
               <div class="caption-content">
@@ -196,24 +115,24 @@
             </div>
             <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
           </a>
-        </div>
+        </div> -->
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#!">
+          <a class="portfolio-item" href="page/recent-project/bus-data-analysis.html">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Strawberries</div>
-                <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                <div class="h2">Bus Data Analysis</div>
+                <p class="mb-0">Analysis of Tourists Mobility Pattern Using Public Transport Card Data</p>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#!">
+          <a class="portfolio-item" href="page/recent-project/waggle.html">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Workspace</div>
-                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                <div class="h2">Waggle</div>
+                <p class="mb-0">Control System Deployment for the Waggle Stack Sensor</p>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
@@ -227,51 +146,60 @@
     <section class="content-section bg-primary text-white text-center" id="blog">
       <div class="container">
         <div class="content-section-heading">
-          <h3 class="text-secondary mb-0">Blog</h3>
-          <h2 class="mb-5">Studies & Activities</h2>
+          <h3 class="text-secondary mb-0">BLOG</h3>
+          <h2 class="mb-5">Activities</h2>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <a style="text-decoration: none;" href="#!">
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
+              <i class="icon-screen-desktop"></i>
             </span>
-            </a>
             <h4>
-              <strong>Courses I took</strong>
+              <strong>창업 동아리</strong>
             </h4>
-            <p class="text-faded mb-0">Looks great on any screen size!</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <a style="text-decoration: none;" href="#!">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-pencil"></i>
-            </span>
-            </a>
-            <h4>
-              <strong>Study by interest</strong>
-            </h4>
-            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+            <p class="text-faded mb-0">
+              2020.03 - 2020.12<br>
+              UCPC, ACM-ICPC 출전<br>
+              온라인 저지를 활용한 스터디
+            </p>
           </div>
           <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-like"></i>
+              <i class="icon-user-female"></i>
             </span>
             <h4>
-              <strong>Activities</strong>
+              <strong>WISET</strong>
             </h4>
-            <p class="text-faded mb-0">Millions of users
-              <i class="fas fa-heart"></i>
-              Start Bootstrap!</p>
+            <p class="text-faded mb-0">
+              2020.04 - 2020.12<br>
+              진로멘토링, 취업교육 참여<br>
+              '최우수발표상' 수상
+            </p>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-mustache"></i>
+              <i class="icon-book-open"></i>
             </span>
+            <h4>
+              <strong>정보 교육 멘토링</strong>
+            </h4>
+            <p class="text-faded mb-0">
+              2019.03 - 2019.07<br>
+              중등 컴퓨팅융합 영재교육 조교<br>
+              19.03 - 19.06 & 20.04 - 20.06<br>
+              '컴퓨팅원리및패러다임' 멘토링
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <a style="text-decoration: none;" href="page/activities/papers-certificates.html">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-badge"></i>
+            </span>
+            </a>
             <h4>
               <strong>Papers & Certificates</strong>
             </h4>
-            <p class="text-faded mb-0">I mustache you a question...</p>
+            <p class="text-faded mb-0">Click!</p>
           </div>
         </div>
       </div>
@@ -282,59 +210,34 @@
   <div id="contact" class="content-section">
     <div class="container text-center">
       <div class="content-section-heading">
-        <h3 class="text-secondary mb-0">RESUME</h3>
+        <h3 class="text-secondary mb-0">STUDIES</h3>
+        <h2 class="mb-5">Courses & Interests</h2>
       </div>
       <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h2>This is for FINAL EXAM</h2>
-          <img style="width: 25%; border-radius: 50%; margin: 10px 0px 30px 0px;" src="page/final/profile_img.png">
-          <div class="resume-contents" style="text-align: justify; position: relative;">
-            <h6>보유 기술</h6>
-            <ol>
-              <li><b>Programming Language</b>&nbsp; Java(~12), C, C++, Python, HTML5<br /></li>
+        <div style="text-align: justify; position: relative; padding-left: 20%;">
+          <div style="margin-bottom: 10%;">
+            <h2>Studies</h2>
+            <a href="https://www.notion.so/Courses-and-Studies-65e9a68bbaf546a8bd18be0dfd9b3e4d" style="padding: 10%;">Link to my personal Notion!</a>
+          </div>
+          <div style="margin-bottom: 10%;">
+            <h2>Skills</h2>
+            <ul>
+              <li><b>Programming Language</b>&nbsp; Java(~12), C, Python, HTML5<br /></li>
               <li><b>Tools and Environments</b>&nbsp; GitHub, IntelliJ, Sublime Text, Android Studio, PyCharm</li>
               <li><b>Library and Framework</b>&nbsp; Bootstrap</li>
-              <li><b>Currently Studying</b>&nbsp; MySQL, UNIX, Linux, Jira, node.js</li>            
-            </ol>
-            <div class="project" style="margin-top: 20px;">
-              <h6>대표 프로젝트</h6>
-              <dl style="padding-left: 30px;">
-                <dt style="font-weight:bold;">WAGGLE Project</dt>
-                <dd>A self-organizing efficient power generation system in extreme condition for Waggle</dd>
-              </dl>
-            </div>
-            <div class="express">
-              <div class="scene">
-                <div class="cube">
-                    <div class="face back" style="background-color: blue;">
-                        <div class="dice-content">Learner</div>
-                    </div>
-                    <div class="face left" style="background-color: red;">
-                        <div class="dice-content">Developer</div>
-                    </div>
-                    <div class="face right" style="background-color:yellow;">
-                        <div class="dice-content">Positive</div>
-                    </div>
-                    <div class="face top" style="background-color:green">
-                        <div class="dice-content">Newbie</div>
-                    </div>
-                    <div class="face bottom" style="background-color:pink">
-                        <div class="dice-content">Achiever</div>
-                    </div>
-                    <div class="face front" style="background-color:lightblue">
-                        <div class="dice-content">Hard-Working</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rectangle" style="width: 300px; height: 200px; background-color: lightcoral; animation: turn 3s ease 1s infinite"></div>
-            </div>
+              <li><b>Currently Studying</b>&nbsp; MySQL, UNIX, Linux, Jira, node.js</li>
+            </ul>
           </div>
-
+          <div>
+            <h2>Interests</h2>
+            <ul>
+              <li><b>Programming Language</b>&nbsp; Java(~12), C, Python, HTML5<br /></li>
+              <li><b>Tools and Environments</b>&nbsp; GitHub, IntelliJ, Sublime Text, Android Studio, PyCharm</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 

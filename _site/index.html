@@ -90,16 +90,18 @@
             transform: translateZ(300px);
         }
 
+        .rectangle {
+          width: 300px; 
+          height: 200px; 
+          background-color: lightcoral;
+          animation: animation 2000ms linear ease 0s;
+        }
+
         .rectangle:hover {
-          
+          transform: rotateY(360deg);
         }
-        @keyframes turn {
-              0% {
-                rotateY(0)
-              } 10% {
-                rotateY(360)
-              }
-        }
+      
+        
   </style>
 </head>
 
@@ -327,7 +329,7 @@
                 </div>
             </div>
 
-            <div class="rectangle" style="width: 300px; height: 200px; background-color: lightcoral; animation: turn 3s ease 1s infinite"></div>
+            <div class="rectangle"></div>
             </div>
           </div>
 
